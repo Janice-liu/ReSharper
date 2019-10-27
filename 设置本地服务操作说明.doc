@@ -1,0 +1,38 @@
+
+ 4.1) Windows:
+    - Start a command prommpt as an Administrator.
+    - Go to the directory, where you put the license
+      server, using "cd".
+    - Install the license server:
+
+      x32: dvt-jb_licsrv.386.exe -mode install
+      x64: dvt-jb_licsrv.amd64.exe -mode install
+
+      This will install the license server as a 
+      windows service. If you want to remove it
+      again, use "-mode uninstall".
+
+    - Open services.msc and start the service.
+      Alternatively, use "net start" or reboot
+      your pc/server.
+	  
+	  
+
+	  
+步骤：
+1、 windows+R(管理员身份运行)-->cmd
+2 粘贴破解版所在位置,再回车，如-cd "D:\软件仓库\开发\VS\Resharper\dvt-license_server破解说明以及对应的服务器操作\windows"
+
+3 粘贴完成路径，如：D:\软件仓库\开发\VS\Resharper\dvt-license_server破解说明以及对应的服务器操作\windows\dvt-jb_licsrv.amd64.exe -mode install
+注意：
+   64位系统执行：dvt-jb_licsrv.amd64.exe -mode install
+   32位系统执行：dvt-jb_licsrv.386.exe -mode install
+   再回车
+4、异常情况
+　a.查找JetBrainsLicServerDVT和jetbrainsetw.108.0.20170407.124549服务看是否存在，存在则删除服务，如sc delete JetBrainsLicServerDVT
+　b.如果提示注册的key已存在，则如下操作：
+  windows+R(管理员身份运行)--->regedit;   
+  在文件中找到上面注册文件所在的位置（一般在HKEY_LOCAL_MACHINE文件下的SYSTEM\CurrentControlSet\Services\EventLog\Application\JetBrainsLicServerDVT），然后删除，最后在执行1,2,3步就OK了
+
+
+  
